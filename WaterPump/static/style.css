@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size:16x;
+    line-height: 1.7;
+    color: #777;
+    padding: 2vw;
+}
+header{
+    position: relative;
+}   
+.container{
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(11, 189, 11, 0.534);  
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.219);
+    animation-play-state: paused;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    transition: all 3s ease-in;
+}
+.slide-main-container1{
+    z-index: 2;
+    transform: translate(-46%, 22vh);
+    text-align: center;
+    padding: 150px 30px;
+    animation-name: test1;
+}
+.slide-main-container2{ 
+    z-index: 1;
+    transform: translate(-50%, 20vh);
+    text-align: center;
+    padding: 50px 10px;
+    animation-name: test2;
+}
+.slide-main-container3{
+    transform: translate(-54%, 18vh);
+    animation-name: test3;
+    text-align: center;
+    padding: 60px 10px;
+}
+.slide-main-container1:hover{
+    transform:translate(-46%, 22vh) rotate(0.01turn);
+}
+.slide-main-container2:hover{
+    transform:translate(-50%, 20vh) rotate(0.01turn);
+}
+.slide-main-container3:hover{
+    transform:translate(-54%, 18vh) rotate(0.01turn);
+}
+@keyframes test1{
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: translate(-46%, -18vh);
+        opacity: 0;   
+    }
+}
+@keyframes test2{
+    50%{
+        opacity: 1;
+    }
+    100%{
+
+        transform: translate(-50%, -18vh);
+        opacity: 0;   
+    }
+}
+@keyframes test3{
+    50%{
+        opacity: 1;
+    }
+    100%{
+
+        transform: translate(-54%, -18vh);
+        opacity: 0;   
+    }
+}
+button{
+    border: 0cm;
+    margin-top: 50px;
+
+}
+.button{
+    display: inline-block;
+    background-image: url('https://image.flaticon.com/icons/png/512/416/416274.png');
+    background-size: cover;
+    background-position: top;
+    height: 100px;
+    width: 100px;
+}
+.button:hover
+{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.219); 
+}
+.button:active
+{
+    transform: translateY(2px);
+}
+h1{
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 6px;
+    
+}
+#input{
+    width: 230px;
+    height: 30px;
+    text-align: center;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+}
+#input :visited{
+    width: 250px;
+}
+#time{
+    font-size: 200px;
+    font-weight: 700;
+    display: inline-block;
+    color: black;
+}
+#ispaused{
+    animation-play-state: running;
+}
+#counter{
+    color: red;
+}
